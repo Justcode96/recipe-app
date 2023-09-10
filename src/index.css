@@ -1,0 +1,130 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for column */ 
+  .column { 
+    display: flex;
+    flex-flow: wrap; 
+    justify-content: space-between; 
+    column-gap: 10px; 
+    width: 100%;
+  } 
+   
+  .column > * { 
+    display: flex; 
+    flex-direction: column;
+    flex-basis: calc(25% - 10px);  
+    box-sizing: border-box; 
+    border-radius: 10px;  
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+  }  
+    
+  .image-container {
+    display: flex;
+    flex-grow: 1; 
+    justify-content: flex-start; 
+    align-items: flex-start;
+    margin-bottom: 10px;
+    max-height: 6em;
+    width: 100%;
+    overflow: hidden;
+    border-top-right-radius: 10px;   
+    border-top-left-radius: 10px;   
+  }
+
+  /* Style for the text in the column */   
+.column-content { 
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.column-content h2 {
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 8px;  
+  margin-bottom: 10px;
+}
+
+  .column-content p { 
+    font-size: 0.6em;
+    margin-top: 8px; 
+    margin-left: 20px;
+    margin-right: 20px;
+  } 
+   
+  /* Hover effect for the column */ 
+  .column > *:hover { 
+    transform: translateY(-5px);  
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+  } 
+
+/* Style for the mealType */
+.meal-type {
+  color: rgb(202, 193, 193);
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* Style for the dietLabels */
+.column-content .diet-labels {
+  background-color:peachpuff;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px; 
+}
+
+/* Style for the healthLabels */
+.column-content .health-labels {
+  background-color:aquamarine;
+  border-radius: 5px;
+  text-align: center;
+  margin: 6px; 
+}
+
+/* Style for the cautions */
+.column-content .cautions {
+  background-color:palegoldenrod;
+  border-radius: 5px;
+  text-align: center;
+  margin: 6px; 
+}
+
+/* Style for the dish-type */
+.dish-type {
+  background-color:rgb(244, 216, 36);
+  border-radius: 5px;
+  text-align: center;
+  margin: 6px; 
+}
+
+/* Style for the background container */
+.bg-c {
+  padding: 2px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Style for the header image */
+.header-image {
+  width: 100%;
+  max-height: calc(100vh - 100px);
+  object-fit: cover; 
+}
+
+/* Styles for tablets */
+@media (max-width: 768px) {
+  .column > * {
+    flex-basis: calc(33.33% - 10px);
+  }
+}
+
+/* Styles for phones */
+@media (max-width: 480px) {
+  .column > * {
+    flex-basis: calc(50% - 10px);
+  }
+}
